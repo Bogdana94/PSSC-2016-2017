@@ -6,11 +6,23 @@ using System.Threading.Tasks;
 
 namespace Models
 {
+    enum tipEvaluare { examen, distribuita };
+    enum proportie { jumatate, treime };
     class Disciplina
     {
         string nume_disciplina;
         int an_studiu;
+        tipEvaluare tipEv;
+        proportie prop;
 
+
+        public Disciplina(string nume_disciplina, int an_studiu, tipEvaluare tipEv, proportie prop)
+        {
+            this.nume_disciplina = nume_disciplina;
+            this.an_studiu = an_studiu;
+            this.tipEv = tipEv;
+            this.prop = prop;
+        }
         public string Nume_disciplina
         {
             get { return nume_disciplina; }
@@ -24,10 +36,6 @@ namespace Models
             set { an_studiu = value; }
         }
        
-        public Disciplina(string nume_disciplina,int an_studiu)
-        {
-            this.nume_disciplina = nume_disciplina;
-            this.an_studiu = an_studiu;
-        }
+       
     }
 }

@@ -6,37 +6,42 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    class Student:Persoana
+    class Student
     {
+        string nume;
+        string telefon;
+        string email;
         int an_studiu;
-        float medie;
-        Orar orar;
+        List<Disciplina> listaDiscipline = new List<Disciplina>();
+        List<Nota> listaNote = new List<Nota>();
 
+        public Student(string nume, string telefon, string email,int an_studiu)
+        {
+            this.nume = nume;
+            this.telefon = telefon;
+            this.email = email;
+            this.an_studiu = an_studiu;
+        }
+        public string Nume
+        {
+            get { return nume; }
+            set { nume = value; }
+        }
+
+        public string Telefon
+        {
+            get { return telefon; }
+            set { telefon = value; }
+        }
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
         public int An_studiu
         {
             get { return an_studiu; }
             set { an_studiu = value; }
-        }
-       
-
-        public float Medie
-        {
-            get { return medie; }
-            set { medie = value; }
-        }
-       
-
-        internal Orar Orar
-        {
-            get { return orar; }
-            set { orar = value; }
-        }
-
-        public Student(string nume, string studii, string adresa, string email,string telefon, Departament departament, int an_studiu,float medie,Orar orar):base(nume,studii,adresa,email,telefon,departament)
-        {
-            this.an_studiu = an_studiu;
-            this.medie = medie;
-            this.orar = orar;
         }
     }
 }

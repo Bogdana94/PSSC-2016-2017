@@ -6,17 +6,50 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    class Profesor:Persoana
+    class Profesor
     {
-        Disciplina disciplina;
+        string nume;
+        string telefon;
+        string email;
         int vechime;
+        List<Disciplina> listaDiscipline = new List<Disciplina>();
 
-        internal Disciplina Disciplina
+        public Profesor(string nume, string email, string telefon, int vechime)
         {
-            get { return disciplina; }
-            set { disciplina = value; }
+            this.nume = nume;
+            this.email = email;
+            this.telefon = telefon;
+            this.vechime = vechime;
+
         }
-       
+
+        public void adauga_note(Student s, Disciplina d, Nota n)
+        {
+
+        }
+
+        public void adauga_nota_marire(Student s, Disciplina d, Nota n)
+        {
+
+        }
+
+        public void selectare_proportie(Disciplina d, proportie p)
+        {
+
+        }
+
+        public string Nume
+        {
+            get { return nume; }
+            set { nume = value; }
+        }
+
+
+        public string Telefon
+        {
+            get { return telefon; }
+            set { telefon = value; }
+        }
 
         public int Vechime
         {
@@ -24,12 +57,13 @@ namespace Models
             set { vechime = value; }
         }
 
-        public Profesor(string nume, string studii, string adresa, string email,string telefon, Departament departament,Disciplina disciplina,int vechime):base(nume,studii,adresa,email,telefon,departament)
+        public string Email
         {
-            this.disciplina=disciplina;
-            this.vechime=vechime;
-
+            get { return email; }
+            set { email = value; }
         }
+
+       
        
     }
 }

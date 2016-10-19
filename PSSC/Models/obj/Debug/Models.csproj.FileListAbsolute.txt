@@ -1,0 +1,5 @@
+C:\Users\Bogdanel\Desktop\Bogdana\PSSC\Models\bin\Debug\Models.dll
+C:\Users\Bogdanel\Desktop\Bogdana\PSSC\Models\bin\Debug\Models.pdb
+C:\Users\Bogdanel\Desktop\Bogdana\PSSC\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+C:\Users\Bogdanel\Desktop\Bogdana\PSSC\Models\obj\Debug\Models.dll
+C:\Users\Bogdanel\Desktop\Bogdana\PSSC\Models\obj\Debug\Models.pdb
