@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models.Generics
 {
+    //value object
     public class PlainText
     {
         private string _text;
@@ -14,6 +15,27 @@ namespace Models.Generics
         public PlainText(string text)
         {
             _text = text;
+        }
+
+        public override string ToString()
+        {
+            return _text.ToString();
+        }
+
+        public override bool Equals(object obj)
+        {
+            var plaintext = (PlainText)obj;
+
+            if (plaintext != null)
+            {
+                return _text.Equals(plaintext._text);
+            }
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return Nume.GetHashCode();
         }
     }
 }

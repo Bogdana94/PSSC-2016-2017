@@ -12,11 +12,16 @@ namespace Models.Professor
     public class Subjects
     {
         private List<Subject.Subject> _subjects;
+        private Generics.Proportion _proportion;
         public ReadOnlyCollection<Subject.Subject> AllSubjects { get { return _subjects.AsReadOnly(); } }
-
-        public Subjects(List<Subject.Subject> subjects)
+        private Models.Subject.Labs Labs { get; internal set; }
+        private Models.Subject.Courses Courses { get; internal set; }
+        public Subjects(List<Subject.Subject> subjects, Generics.Proportion proportion)
         {
             _subjects = subjects;
+            Labs = new Subject.Labs();
+            Courses = new Subject.Courses();
+            _proportion = proportion;
         }
 
         public void AddExamGrade(PlainText subjectName, RegistrationNumber regNumber, Grade grade)

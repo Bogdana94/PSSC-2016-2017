@@ -1,5 +1,6 @@
 ﻿namespace Models.Generics
 {
+    //value object
     public class Proportion
     {
         private int _numerator;

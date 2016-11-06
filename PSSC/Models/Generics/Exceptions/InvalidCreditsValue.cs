@@ -8,5 +8,9 @@ namespace Models.Generics.Exceptions
 {
     public class InvalidCreditsValue : Exception
     {
+        public InvalidCreditsValue(int credit)
+        {
+
+        }
     }
 }
