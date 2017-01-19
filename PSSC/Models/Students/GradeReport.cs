@@ -1,4 +1,5 @@
 ﻿using Models.Generics;
+using Models.Repositories;
 using Models.Subject;
 using System;
 using System.Collections.Generic;
@@ -10,8 +11,9 @@ using System.Threading.Tasks;
 namespace Models.Students
 {
     //Aggregate Root
-    public class GradeReport
+    public class GradeReport:IEntity
     {
+        public int Id { get; set; }
         private ReadOnlyCollection<KeyValuePair<SubjectInformation, SubjectSituation>> _gradeReport;
 
         public GradeReport(ReadOnlyCollection<KeyValuePair<SubjectInformation, SubjectSituation>> gradeReport)

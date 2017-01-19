@@ -1,4 +1,5 @@
 ﻿using Models.Generics;
+using Models.Repositories;
 using Models.Subject;
 using System;
 using System.Collections.Generic;
@@ -10,8 +11,9 @@ using System.Threading.Tasks;
 namespace Models.Deanship
 {
     //Aggregate Root
-    public class StudyYear
+    public class StudyYear:IEntity
     {
+        public int Id { get; set; }
         private List<Subject.Subject> _definedSubjects;
         public ReadOnlyCollection<Subject.Subject> Subjects { get { return _definedSubjects.AsReadOnly(); } }
 

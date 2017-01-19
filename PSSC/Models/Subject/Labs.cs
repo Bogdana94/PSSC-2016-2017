@@ -12,7 +12,7 @@ namespace Models.Subject
     public class Labs
     {
         private List<Lab> _laboratoare;
-        public ReadOnlyCollection<Lab> Valori { get { return _laboratoare.AsReadOnly(); } }
+     //   public ReadOnlyCollection<Lab> Valori { get { return _laboratoare.AsReadOnly(); } }
 
         internal Labs()
         {

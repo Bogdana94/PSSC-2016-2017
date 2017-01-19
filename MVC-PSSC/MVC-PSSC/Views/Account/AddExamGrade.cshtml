@@ -1,0 +1,15 @@
+﻿@model Models.Professor.Subjects
+
+@{
+    ViewBag.Title = "AddExamGrade";
+}
+
+<h2>AddExamGrade</h2>
+@using (Html.BeginForm())
+{
+    <text>
+
+        Exam grade: <input type="text" name="ExamGrade" />
+        <input type="submit" value="Submit" />
+    </text>
+}

@@ -33,9 +33,9 @@ namespace Models.Generics
             return false;
         }
 
-        public override int GetHashCode()
+    /*    public override int GetHashCode()
         {
             return Nume.GetHashCode();
-        }
+        }*/
     }
 }
